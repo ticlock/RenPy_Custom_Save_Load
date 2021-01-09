@@ -26,7 +26,7 @@ Since number of save slots per file page is changable, the *save screenshots (th
 * *Save screenshots* may drop in quality when resizing. It is recomended for player to set the preferred cols and rows number of save slots before playing to avoid future resizing.
 * Resizing is implemented based on default Ren'Py screen aspect ratio and default size ratios of save screenshot and slot button and their relative position
 
-### Recomended size for **slot_idle_background.png** and **slot_hover_background.png** and positioning of blank scrennshot inside
+### Recomended size for **slot_idle_background.png** and **slot_hover_background.png** and positioning of blank screenshot image inside
 Resolution aspect ratio (16:9). For example: 1024x576, 1280x720, 1920x1080
 ![screenshot](/game/images/007.png)
 ![screenshot](/game/images/008.png)
