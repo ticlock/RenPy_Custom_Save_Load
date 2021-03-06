@@ -479,14 +479,22 @@ init python:
             pass
 
     def set_save_name(new_name):
-        store.save_name = new_name
+        def quote(s):
+            s = s.replace("{", "{{")
+            s = s.replace("[", "[[")
+            return s
+        store.save_name = quote(new_name)
 
     def _add_bookmark_file_page(name, s_page, e_page):
+        def quote(s):
+            s = s.replace("{", "{{")
+            s = s.replace("[", "[[")
+            return s
         if s_page == '' or s_page == '0':
             s_page = '1'
         if e_page == '' or e_page == '0':
             e_page = '1'
-        persistent._bookmark_file_page.append([name,s_page,e_page])
+        persistent._bookmark_file_page.append([quote(name),s_page,e_page])
         persistent._bookmark_file_page.sort(key = lambda x: int(x[1]))
     def _del_bookmark_file_page(n):
         if n != None:
